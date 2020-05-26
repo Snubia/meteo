@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <section class="top-banner">
+        <div class="container">
+          <h1 class="heading">Weather Dashboard / Meteo</h1>
+       
+          <div class="container-fluid">
+            <div class="row">
+              <aside class="col-lg-3 bg-light">
+                <h5>City</h5>
+                <div class="form-inline form-group">
+                  <input class="form-control" type="text" id="search-value" />
+                  <button type="submit">SUBMIT</button>
+        
+                </div>
+                <ul class="list-group history"></ul>
+              </aside>
+              <div class="col-lg-9">
+                <div id="today" class="mt-3"></div>
+                <div id="forecast" class="mt-3"></div>
+              </div>
+            </div>
+          </div>
+      <footer class="page-footer">
+        <div class="container">
+          <small>Made with <span>❤</span> by <a href="https://snubia.github.io/portfolioUp/" target="_blank">Sandrine B. Nubia</a>
+          </small>
+        </div>
+      </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="./script.js"></script>
+</body>
+</html>
