@@ -1,42 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meteo</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard/ Meteo</title>
+
 </head>
 <body>
-    
-    <section class="top-banner">
-        <div class="container">
-          <h1 class="heading">Weather Dashboard / Meteo</h1>
-       
-          <div class="container-fluid">
-            <div class="row">
-              <aside class="col-lg-3 bg-light">
-                <h5>City</h5>
-                <div class="form-inline form-group">
-                  <input class="form-control" type="text" id="search-value" />
-                  <button type="submit">SUBMIT</button>
+
+        <!-- This is my navbar -->
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-text" id="navbar1">
+                    Weather Dashboard / Meteo
+            </span>
+        </nav>
+  
+
+        <!-- This is my sidebar -->
+        <div class="sidenav">
+            <input id="search-box" class="form-control form-control-lg" type="text" placeholder="">
+           <!-- <img id="search-button" src="assets/images/search_pic.png" alt="search button"> -->
+           <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i></button>
+            <a href="#" id="Austin">Austin</a>
+            <a href="#" id="Chicago">Chicago</a>
+            <a href="#" id="New-York">New York</a>
+            <a href="#" id="San-Francisco">San Francisco</a>
+            <a href="#" id="Seattle">Seattle</a>
+            <a href="#" id="Denver">Denver</a>
+            <a href="#" id="Atlanta">Atlanta</a>
+        </div>    
         
-                </div>
-                <ul class="list-group history"></ul>
-              </aside>
-              <div class="col-lg-9">
-                <div id="today" class="mt-3"></div>
-                <div id="forecast" class="mt-3"></div>
-              </div>
+        
+        <div class="main">
+
+            <div id="top-card" class="card">
+                    <div class="card-body" id="top-card-body">
+                        <p id="city">City</p>
+                        <h5 id="temperature">Temperature</h5>
+                        <h5 id="humidity">Humidity</h5>
+                        <h5 id="wind">Wind Speed</h5>
+                        <!-- <p id="uv">UV Index</p> -->
+                    </div>     
             </div>
-          </div>
-      <footer class="page-footer">
-        <div class="container">
-          <small>Made with <span>❤</span> by <a href="https://snubia.github.io/portfolioUp/" target="_blank">Sandrine B. Nubia</a>
-          </small>
+
+            <div class="container" id="bottom-container">
+
+                <div class="row w-100">
+                        <p id="forecast5day"> 5-Day Forecast:</p>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="forecast-card" class="card">
+                                <div class="card-body" id="fc1">
+                                
+                                </div> 
+                        </div>  
+                    </div>
+                    <div class="col">
+                        <div class="forecast-card" class="card">
+                                <div class="card-body" id="fc2">
+                                
+                                </div> 
+                        </div>  
+                    </div>
+                    <div class="col">
+                        <div class="forecast-card" class="card">
+                                <div class="card-body" id="fc3">
+                                
+                                </div> 
+                        </div>  
+                    </div>
+                    <div class="col">
+                        <div class="forecast-card" class="card">
+                                <div class="card-body" id="fc4">
+                                
+                                </div> 
+                        </div>  
+                    </div>    
+                    <div class="col">
+                        <div class="forecast-card" class="card">
+                                <div class="card-body" id="fc5">
+                                
+                                </div> 
+                        </div>  
+                    </div>                                    
+
+                </div>
+    
+
+            </div>
+
+            <!-- <div class = "forecast1" ></div> -->
+
+
+
+
         </div>
-      </footer>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="./script.js"></script>
+
+  <footer class="page-footer">
+    <div class="container">
+      <small>Made with <span>❤</span> by <a href="https://www.linkedin.com/in/sandrine-nubia-975aa2172/" target="_blank">Sandrine B. Nubia</a>
+      </small>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
